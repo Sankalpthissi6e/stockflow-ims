@@ -1,0 +1,4 @@
+/* Products page — minimal extra styles; uses global design system */
+.products-page .table-container {
+  animation: slideUp var(--transition-slow) ease-out;
+}

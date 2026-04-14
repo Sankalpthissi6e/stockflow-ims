@@ -1,0 +1,20 @@
+/* ═══════════════════════════════════════════════════
+   Manufacturing Page
+   ═══════════════════════════════════════════════════ */
+
+.mfg-modal {
+  max-width: 640px;
+}
+
+.mfg-item-row {
+  display: grid;
+  grid-template-columns: 2fr 80px 40px;
+  gap: 8px;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .mfg-item-row {
+    grid-template-columns: 1fr;
+  }
+}

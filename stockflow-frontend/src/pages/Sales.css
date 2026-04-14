@@ -1,0 +1,31 @@
+/* ═══════════════════════════════════════════════════
+   Sales / Purchases — Order shared styles
+   ═══════════════════════════════════════════════════ */
+
+.order-modal {
+  max-width: 640px;
+}
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-item-row {
+  display: grid;
+  grid-template-columns: 2fr 80px 100px 40px;
+  gap: 8px;
+  align-items: center;
+}
+
+.item-qty,
+.item-price {
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .order-item-row {
+    grid-template-columns: 1fr;
+  }
+}
