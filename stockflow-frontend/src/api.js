@@ -2,7 +2,9 @@
    StockFlow IMS — API Service Layer
    ═══════════════════════════════════════════════════ */
 
-const API_BASE = import.meta.env.VITE_API_URL || '/api';
+// Ensure API_BASE always ends with /api regardless of how VITE_API_URL is configured
+const _rawBase = import.meta.env.VITE_API_URL || '/api';
+const API_BASE = _rawBase.endsWith('/api') ? _rawBase : _rawBase.replace(/\/+$/, '') + '/api';
 
 function getToken() {
   return localStorage.getItem('sf_token');
